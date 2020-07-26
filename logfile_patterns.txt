@@ -1,0 +1,9 @@
+Sterling:
+<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] %p %m%n" />
+
+JBoss:
+<param name="ConversionPattern" value="%d %-5r %-5p [%c] (%t:%x) %m%n"/>
+<param name="ConversionPattern" value="%d %-5p [%c] %m%n"/>
+
+SCI:
+<param name="ConversionPattern" value="%d:%-7p:%t: %-60m [%X{AppUserId}]: %-25c{1}%n" />
