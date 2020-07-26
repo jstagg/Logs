@@ -1,0 +1,130 @@
+prd-omsagt-06:
+2019-03-11 17:59:47,146:INFO   :Thread-13_OPG_WebAppSubmitOrder_0: Select for update no wait failed for: InventoryItemKey = 201007241409463233393 : Number of attempt = 1 [system]: YFSAvailabilityManagerImpl
+2019-03-11 17:59:47,146:INFO   :Thread-13_OPG_WebAppSubmitOrder_0: Sleeping for 2500 ms.                                        [system]: YFSAvailabilityManagerImpl
+2019-03-11 17:59:49,648:INFO   :Thread-13_OPG_WebAppSubmitOrder_0: Select for update no wait failed for: InventoryItemKey = 201007241409463233393 : Number of attempt = 2 [system]: YFSAvailabilityManagerImpl
+2019-03-11 17:59:49,648:INFO   :Thread-13_OPG_WebAppSubmitOrder_0: Sleeping for 2500 ms.                                        [system]: YFSAvailabilityManagerImpl
+2019-03-11 17:59:52,151:INFO   :Thread-13_OPG_WebAppSubmitOrder_0: Select for update no wait failed for: InventoryItemKey = 201007241409463233393 : Number of attempt = 3 [system]: YFSAvailabilityManagerImpl
+2019-03-11 17:59:52,151:INFO   :Thread-13_OPG_WebAppSubmitOrder_0: Lock inventory item with no wait failed for: InventoryItemKey = 201007241409463233393 [system]: YFSAvailabilityManagerImpl
+2019-03-11 17:59:52,152:INFO   :Thread-13_OPG_WebAppSubmitOrder_0: Time out occured during lock inventory item and register time for item : 201007241409463233393 :Failed attempt = 1 [system]: YFSAvailabilityManagerImpl
+
+
+
+prd-omsagt-02:
+2019-03-11 18:07:46,955:ERRORDTL:Thread-13_OPG_WebAppSubmitOrder_0: [1552342066953]<?xml version="1.0" encoding="UTF-8"?>
+<Errors>
+    <Error ErrorCode="YFC0101"
+        ErrorDescription="Lock timeout detected by the database."
+        ErrorRelatedMoreInfo="" ErrorUniqueExceptionId="127.0.0.115523420626900000000003111">
+        <Attribute Name="ErrorCode" Value="YFC0101"/>
+        <Attribute Name="ErrorDescription" Value="Lock timeout detected by the database."/>
+        <Attribute Name="SQLState" Value="61000"/>
+        <Attribute Name="TransactionIsolationLevel" Value="2"/>
+        <Attribute Name="SQLStatement" Value="Prepared Statement -  SELECT  /*YANTRA*/    YFS_ORDER_HEADER.* FROM YFS_ORDER_HEADER YFS_ORDER_HEADER     WHERE (YFS_ORDER_HEADER.ORDER_HEADER_KEY = '201903110508109559766308') FOR UPDATE NOWAIT "/>
+        <Attribute Name="DBErrorCode" Value="54"/>
+        <Error ErrorCode="java.sql.SQLException" ErrorDescription="" ErrorRelatedMoreInfo="ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired&#xa;">
+            <Stack>java.sql.SQLException: ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired
+
+
+
+prd-esb-03:
+2019/03/11 17:36:27,212 | DEBUG | erveorderforedit | ess.ReserveOrderForEditProcessor   34 | 325 - Sprich.sales-order-edit-ws - 1.0.0.SNAPSHOT | Client request XML:
+<ReserveOrderForEditRequest><Promise CheckInventory="Y" IgnoreUnpromised="Y" IsPartialSubstitutionAllowed="N" IsSubstitutionAllowed="N" OptimizationType="03" OrganizationCode="SPR" UseLandedCost="N" UseUnplannedInventory="N" DemandType="RESERVED" ReqStartDate="" EnterpriseCode="SPR"><PromiseLines><PromiseLine IsProcurementAllowed="N" ItemID="323519" LineId="6" OrderLineReference="" RequiredQty="1"><ReservationParameters ReservationID="UI-b9eb5e72-6cd9-4b58-89ec-611d2e45c462" /><ShipNodes><ShipNode Node="013" /></ShipNodes><ItemFilter><PrimaryInformation ManufacturerItem="GJO10216CT" /></ItemFilter></PromiseLine></PromiseLines><ReservationParameters AllowMultipleReservations="N" ExpirationDate="2019-03-12T16:23:59" /></Promise></ReserveOrderForEditRequest>
+2019/03/11 17:36:27,211 | DEBUG | /getorderforedit | process.GetOrderForEditProcessor  518 | 325 - Sprich.sales-order-edit-ws - 1.0.0.SNAPSHOT | salesOrderList =
+
+            <OrderList LastOrderHeaderKey="201903110508109559766308"
+                LastRecordSet="Y" ReadFromHistory=""
+                TotalNumberOfRecords="1" TotalOrderList="1">
+                <Order BuyerOrganizationCode="2276500.72"
+                    CarrierAccountNo=""
+                    Createts="2019-03-11T05:13:35-04:00"
+                    CustomerPONo="3RYBFLHP" DocumentType="0001"
+                    EnteredBy="EZ$" EnterpriseCode="SPR"
+                    HasChainedLines="" HasPendingChanges="N"
+                    IsShipComplete="N" MaxOrderStatus="3200.20"
+                    MinOrderStatus="1100" NotifyAfterShipmentFlag="N"
+                    OrderDate="2019-03-11T05:13:35-04:00"
+                    OrderHeaderKey="201903110508109559766308"
+                    OrderNo="028AF23AW" OrderType="01" ShipNode="028" Status="Partially Waved">
+
+
+
+2019/03/11 17:37:34,210 | DEBUG | /getorderforedit | process.GetOrderForEditProcessor 2506 | 325 - Sprich.sales-order-edit-ws - 1.0.0.SNAPSHOT | xmlDocument (createSterlingResponse) = <?xml version=
+"1.0" encoding="UTF-8"?><GetOrderForEditResponse>
+<ESBReturnCode>00000000</ESBReturnCode>
+<ResponseCode>00000023</ResponseCode>
+<ResponseMessage>Error retrieving order releases for Sales Order Number 028AF23AW from Sterling</ResponseMessage>&lt;OrderList LastOrderHeaderKey="201903110508109559766308" LastRecordSet="Y" ReadFromHistory="" TotalNumberOfRecords="1" TotalOrderList="1"&gt;
+                &lt;Order BuyerOrganizationCode="2276500.72" CarrierAccountNo="" Createts="2019-03-11T05:13:35-04:00" CustomerPONo="3RYBFLHP" DocumentType="0001" EnteredBy="EZ$" EnterpriseCode="SPR" HasChainedLines="" HasPendingChanges="Y" IsEditable="Y" IsShipComplete="N" MaxOrderStatus="3200.20" MinOrderStatus="1100" NotifyAfterShipmentFlag="N" OrderDate="2019-03-11T05:13:35-04:00" OrderHeaderKey="201903110508109559766308" OrderNo="028AF23AW" OrderType="01" ShipNode="028" Status="Partially Waved"&gt;
+                    &lt;Extn ExtnAllowBackorders="N" ExtnAttnDesc="" ExtnAutoRoute="D" ExtnBillOnly="N" ExtnCanNonUps="N" ExtnConsumerPhone="" ExtnCustCreditLimit="0.00" ExtnCustCreditStatus="1" ExtnCustCreditTerms="1" ExtnDealerAttn="" ExtnDealerRefNo="8026645" ExtnDemandOwner="YOMS" ExtnLabelCmmnts1="" ExtnLabelCmmnts2="" ExtnLabelCmmnts3="" ExtnLastModifiedBy="" ExtnOneOrderPerInvoice="Y" ExtnOrigTotalAmtNoBump="60782.70" ExtnPlacedBy="SPRLD" ExtnRepName="HEADQUARTERS" ExtnRepNo="097" ExtnSplRouteCode="" ExtnUseDcAddr="Y"/&gt;
+                    &lt;OrderHoldTypes&gt;
+                        &lt;OrderHoldType HoldType="OrderOverAmount" LastHoldTypeDate="2019-03-11T05:13:35-04:00" Modifyts="2019-03-11T08:26:25-04:00" ReasonText="" ResolverUserId="Credit.Kajuju Mburugu" Status="1300" StatusDescription="Resolved"/&gt;
+                    &lt;/OrderHoldTypes&gt;
+                    &lt;BuyerOrganization OrganizationCode="2276500.72" OrganizationName="AMAZON.COM"&gt;
+                        &lt;Extn CreditLimit="0000000000000.00"/&gt;
+                    &lt;/BuyerOrganization&gt;
+                    &lt;Instructions NumberOfInstructions="6"&gt;
+                        &lt;Instruction InstructionText="EZ-ORDER E.D.I. PURCHASE ORDER" InstructionType="COMMENT" SequenceNo="1"/&gt;
+                        &lt;Instruction InstructionText="15R94512,34C04159,26Z88079,31I91450,38461654,30O81" InstructionType="TC" SequenceNo="4"/&gt;
+                        &lt;Instruction InstructionText="583,11U06955,08O37730,39K06159,17Y94187,01172197,3" InstructionType="TC" SequenceNo="5"/&gt;
+                        &lt;Instruction InstructionText="5A28388,10T83294,09T50268,28X39878,33615352,16C397" InstructionType="TC" SequenceNo="6"/&gt;
+                        &lt;Instruction InstructionText="20,05647442,02K37603,18D25019,13D98427,07S59435,06" InstructionType="TC" SequenceNo="7"/&gt;
+                        &lt;Instruction InstructionText="D03290,04Z75267,36E29685" InstructionType="TC" SequenceNo="8"/&gt;
+                    &lt;/Instructions&gt;
+                    &lt;Notes NumberOfNotes="0"/&gt;
+                    &lt;PaymentMethods&gt;
+                        &lt;PaymentMethod CustomerAccountNo="2276500.00" PaymentKey="201903110512269559776286" PaymentType="CUSTOMER_ACCOUNT"/&gt;
+                    &lt;/PaymentMethods&gt;
+
+
+
+2019/03/11 17:55:24,162 | DEBUG | /getorderforedit | process.GetOrderForEditProcessor  939 | 325 - Sprich.sales-order-edit-ws - 1.0.0.SNAPSHOT | responseStr = <?xml version="1.0" encoding="UTF-8"?><GetOrderForEditResponse>
+<ESBReturnCode>55555555</ESBReturnCode>
+<ResponseCode>00000003</ResponseCode>
+<ResponseMessage>Sales Order 028AF23AW is not editable as it is currently edited by another user</ResponseMessage>
+</GetOrderForEditResponse>
+
+
+
+2019/03/11 18:10:47,956 | DEBUG | /getorderforedit | process.GetOrderForEditProcessor  184 | 325 - Sprich.sales-order-edit-ws - 1.0.0.SNAPSHOT | Client request XML:
+<GetOrderForEditRequest><OrderNo>028AF23AW</OrderNo><UserId>29175</UserId></GetOrderForEditRequest>
+
+
+
+2019/03/11 18:10:50,706 | DEBUG | /getorderforedit | process.GetOrderForEditProcessor  817 | 325 - Sprich.sales-order-edit-ws - 1.0.0.SNAPSHOT | result =
+            <OrderList LastOrderHeaderKey="201903110508109559766308"
+                LastRecordSet="Y" ReadFromHistory=""
+                TotalNumberOfRecords="1" TotalOrderList="1">
+                <Order BuyerOrganizationCode="2276500.72"
+                    CarrierAccountNo=""
+                    Createts="2019-03-11T05:13:35-04:00"
+                    CustomerPONo="3RYBFLHP" DocumentType="0001"
+                    EnteredBy="EZ$" EnterpriseCode="SPR"
+                    HasChainedLines="" HasPendingChanges="Y"
+                    IsShipComplete="N" MaxOrderStatus="3700.10"
+                    MinOrderStatus="1100" NotifyAfterShipmentFlag="N"
+                    OrderDate="2019-03-11T05:13:35-04:00"
+                    OrderHeaderKey="201903110508109559766308"
+                    OrderNo="028AF23AW" OrderType="01" ShipNode="028" Status="Partially Invoiced">
+                    <Extn ExtnAllowBackorders="N" ExtnAttnDesc=""
+                        ExtnAutoRoute="D" ExtnBillOnly="N"
+                        ExtnCanNonUps="N" ExtnConsumerPhone=""
+                        ExtnCustCreditLimit="0.00"
+                        ExtnCustCreditStatus="1" ExtnCustCreditTerms="1"
+                        ExtnDealerAttn="" ExtnDealerRefNo="8026645"
+                        ExtnDemandOwner="YOMS" ExtnLabelCmmnts1=""
+                        ExtnLabelCmmnts2="" ExtnLabelCmmnts3=""
+                        ExtnLastModifiedBy="" ExtnOneOrderPerInvoice="Y"
+                        ExtnOrigTotalAmtNoBump="60782.70"
+                        ExtnPlacedBy="SPRLD" ExtnRepName="HEADQUARTERS"
+                        ExtnRepNo="097" ExtnSplRouteCode="" ExtnUseDcAddr="Y"/>
+                    <OrderHoldTypes>
+                        <OrderHoldType HoldType="OrderOverAmount"
+                            LastHoldTypeDate="2019-03-11T05:13:35-04:00"
+                            Modifyts="2019-03-11T08:26:25-04:00"
+                            ReasonText=""
+                            ResolverUserId="Credit.Kajuju Mburugu"
+                            Status="1300" StatusDescription="Resolved"/>
+                        <OrderHoldType HoldType="PendingChanges"
+                            LastHoldTypeDate="2019-03-11T17:36:31-04:00"
+                            Modifyts="2019-03-11T17:36:31-04:00"
+                            ReasonText="" Status="1100" StatusDescription="Created"/>
+                    </OrderHoldTypes>

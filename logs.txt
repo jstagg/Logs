@@ -1,0 +1,38 @@
+20%{DATESTAMP}: %{TIMESTAMP_ISO8601:timestamp} %{LOGLEVEL:severity} %{GREEDYDATA:message}
+
+(?m)^%{SYSLOG5424SD:timestamp}.+?20%{DATESTAMP}\:%{LOGLEVEL:severity}\:%{GREEDYDATA:message}
+
+(?m)%{SYSLOG5424SD}\s\w.+?\s%{TIMESTAMP_ISO8601:timestamp}\:%{LOGLEVEL:severity}\s.+?\:%{GREEDYDATA:theRest}
+
+
+Sterling:
+<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss.SSS}] %p %m%n" />
+\[(?<timestamp>%{YEAR}-%{MONTHNUM2}-%{MONTHDAY} %{HOUR}:%{MINUTE}:%{SECOND}.%{NONNEGINT})\] %{LOGLEVEL:loglevel} %{GREEDYDATA:message}$
+
+JBoss:
+<param name="ConversionPattern" value="%d %-5r %-5p [%c] (%t:%x) %m%n"/>
+<param name="ConversionPattern" value="%d %-5p [%c] %m%n"/>
+
+SCI:
+<param name="ConversionPattern" value="%d:%-7p:%t: %-60m [%X{AppUserId}]: %-25c{1}%n" />
+
+
+
+
+# Works!!! for Sterling
+(?m)%{TIMESTAMP_ISO8601:timestamp}\:%{LOGLEVEL:severity}.+?\:%{GREEDYDATA:theRest}
+^(?!%{TIMESTAMP_ISO8601})
+
+
+# Works!!! for ESB
+^(?m)%{MYDATE:timestamp}\s\|\s%{LOGLEVEL:severity}\s\|\s%{URIPATH:uripath}\s\|%{MYPROCESSOR:processor}\|%{MYBUNDLE:bundle}\|\s%{GREEDYDATA:theRest}
+MYDATE \d\d\d\d/\d\d/\d\d\s\d\d:\d\d:\d\d,\d\d\d
+MYPROCESSOR \s.+?\s
+MYBUNDLE \s.+?\s
+^(?!%{MYDATE})
+
+
+https://github.com/logstash-plugins/logstash-patterns-core/tree/master/patterns
+https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
+https://grokconstructor.appspot.com/do/match#result
+https://grokdebug.herokuapp.com/

@@ -1,0 +1,51 @@
+2020-07-24 06:32:06 : Starting integrationserverMem.sh ManageItemAssociations from uat-oms-01-rhel7:/opt/yantra/scripts/managers/sprServerManagerTune.sh
+log4j:WARN No such property [rotateLogs] in org.apache.log4j.RollingFileAppender.
+log4j:WARN No such property [rotateLogs] in org.apache.log4j.DailyRollingFileAppender.
+log4j:WARN No such property [maxBackupIndex] in org.apache.log4j.DailyRollingFileAppender.
+log4j:WARN No such property [rotateLogs] in org.apache.log4j.DailyRollingFileAppender.
+log4j:WARN No such property [maxBackupIndex] in org.apache.log4j.DailyRollingFileAppender.
+log4j:WARN No such property [maxBackupIndex] in org.apache.log4j.DailyRollingFileAppender.
+log4j:WARN No such property [maxBackupIndex] in org.apache.log4j.DailyRollingFileAppender.
+log4j:WARN No such property [maxBackupIndex] in org.apache.log4j.DailyRollingFileAppender.
+log4j:WARN No such property [maxBackupIndex] in org.apache.log4j.DailyRollingFileAppender.
+2020-07-24 06:32:07,658:INFO   :main: Initializing data cache...                                   [system]: YCPSystem                
+2020-07-24 06:32:08,490:WARN   :main: Clearing cache. Number cached=0                              [system]: YFS_CustomerDBCacheHome  
+2020-07-24 06:32:09,681:WARN   :main: Clearing cache. Number cached=0                              [system]: YFS_Customer_Additional_AddressDBCacheHome
+2020-07-24 06:32:09,715:WARN   :main: Clearing cache. Number cached=0                              [system]: YFS_Customer_ContactDBCacheHome
+2020-07-24 06:32:17,111:INFO   :main: Configuring Error Context                                    [system]: ErrorContext             
+2020-07-24 06:32:17,262:INFO   :main: Server ManageItemAssociations_0 registered.                  [system]: YFCRemoteManager         
+2020-07-24 06:32:17,265:INFO   :main: Initializing ehcache...                                      [system]: SCExternalCacheSetup     
+2020-07-24 06:32:17,327:INFO   :main: Starting Service[ 0] For RuntimeId: opgManageItemAssociations_0 [system]: ServiceContextMediatorBase
+2020-07-24 06:32:17,328:INFO   :main: Successfully started all services for Server: ManageItemAssociations [system]: IntegrationAdapter       
+2020-07-24 06:47:17,291:INFO   :Timer-2: The time for automatic shutdown has not yet arrived.         [system]: AgentAutoExitTimerTask   
+2020-07-24 07:02:17,298:INFO   :Timer-2: Automatic shutdown is now happening...                       [system]: AgentAutoExitTimerTask   
+2020-07-24 07:02:17,298:INFO   :Timer-2: Terminating the messaging context                            [system]: AdminScheduler           
+2020-07-24 07:02:17,298:WARN   :Timer-2: Shutting down the ServiceContext                             [system]: ServiceContextBase       
+2020-07-24 07:02:17,299:INFO   :Timer-2: Stopping JMS consumer for subFlow [opgManageItemAssociations_0] in Flow [opgManageItemAssociations] [system]: JMSConsumer              
+2020-07-24 07:02:17,302:INFO   :Timer-2: Successfully Stopped Service[0] For RuntimeId: opgManageItemAssociations_0 [system]: ServiceContextMediatorBase
+2020-07-24 07:02:17,303:WARN   :Timer-2: Successfully shutdown the ServiceContext                     [system]: ServiceContextBase       
+2020-07-24 07:02:17,303:INFO   :Timer-2: Successfully terminated the messaging context                [system]: AdminScheduler           
+2020-07-24 07:02:17,303:INFO   :Timer-2: Terminating the error context                                [system]: AdminScheduler           
+2020-07-24 07:02:17,303:INFO   :Timer-2: Shutting down the error context                              [system]: ErrorContext             
+2020-07-24 07:02:17,303:INFO   :Timer-2: Stopping the Error Consumer service                          [system]: ErrorContextMediator     
+2020-07-24 07:02:17,303:INFO   :Timer-2: Waiting for the consumer thread to fall off                  [system]: ErrorDispatchConsumer    
+2020-07-24 07:02:17,303:INFO   :Timer-2: consumer thread has fallen off gracefully                    [system]: ErrorDispatchConsumer    
+2020-07-24 07:02:17,303:INFO   :Timer-2: Stopping the Error Updater service                           [system]: ErrorContextMediator     
+2020-07-24 07:02:17,303:INFO   :Timer-2: Finished shutting down the error context                     [system]: ErrorContext             
+2020-07-24 07:02:17,304:INFO   :Timer-2: Successfully terminated the error context                    [system]: AdminScheduler           
+2020-07-24 07:02:17,304:INFO   :Timer-2: Shutting down the scheduler thread                           [system]: AdminScheduler           
+2020-07-24 07:02:17,304:INFO   :Timer-2: Scheduler has been successfully cancelled                    [system]: AdminScheduler           
+2020-07-24 07:02:20,306:INFO   :Thread-7: Terminating the messaging context                            [system]: AdminScheduler           
+2020-07-24 07:02:20,306:WARN   :Thread-7: Shutting down the ServiceContext                             [system]: ServiceContextBase       
+2020-07-24 07:02:20,307:WARN   :Thread-7: Successfully shutdown the ServiceContext                     [system]: ServiceContextBase       
+2020-07-24 07:02:20,307:INFO   :Thread-7: Successfully terminated the messaging context                [system]: AdminScheduler           
+2020-07-24 07:02:20,307:INFO   :Thread-7: Terminating the error context                                [system]: AdminScheduler           
+2020-07-24 07:02:20,307:INFO   :Thread-7: Shutting down the error context                              [system]: ErrorContext             
+2020-07-24 07:02:20,307:INFO   :Thread-7: Stopping the Error Consumer service                          [system]: ErrorContextMediator     
+2020-07-24 07:02:20,307:INFO   :Thread-7: Waiting for the consumer thread to fall off                  [system]: ErrorDispatchConsumer    
+2020-07-24 07:02:20,308:INFO   :Thread-7: consumer thread has fallen off gracefully                    [system]: ErrorDispatchConsumer    
+2020-07-24 07:02:20,308:INFO   :Thread-7: Stopping the Error Updater service                           [system]: ErrorContextMediator     
+2020-07-24 07:02:20,308:INFO   :Thread-7: Finished shutting down the error context                     [system]: ErrorContext             
+2020-07-24 07:02:20,308:INFO   :Thread-7: Successfully terminated the error context                    [system]: AdminScheduler           
+2020-07-24 07:02:20,308:INFO   :Thread-7: Shutting down the scheduler thread                           [system]: AdminScheduler           
+2020-07-24 07:02:20,308:INFO   :Thread-7: Scheduler has been successfully cancelled                    [system]: AdminScheduler           
